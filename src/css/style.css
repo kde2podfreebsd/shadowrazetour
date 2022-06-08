@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Macondo&family=Montserrat:wght@300;400;500;700&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.header {
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.header__body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__title {
+  font-family: 'Macondo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 113px;
+}
+
+.header__title-mobile {
+  display: none;
+}
+
+.header__text {
+  max-width: 630px;
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.header__button {
+  display: block;
+  margin-top: 35px;
+  padding: 9px 82px;
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 700;
+  max-width: 373px;
+  font-size: 24px;
+  line-height: 29px;
+  background: #000000;
+  border-radius: 30px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__button:hover {
+  transform: scale(1.03);
+}
+
+.header__towns-button {
+  display: block;
+  padding: 8px 57px;
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  max-width: 215px;
+  color: #000000;
+  background: #ffffff;
+  box-shadow: 0px 15px 29px -6px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-top: 2px;
+  text-align: center;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.header__towns-button:hover {
+  transform: scale(1.03);
+  animation: none;
+}
+
+.header__logo {
+  margin-top: 250px;
+  max-width: 100%;
+  width: 90px;
+}
+
+.header__social {
+  display: flex;
+  flex-direction: column;
+  row-gap: 26px;
+}
+
+.header__social-item {
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__social-item:hover {
+  opacity: 1;
+}
+
+.header__image {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 175px;
+}
+
+@media (max-width: 768px) {
+  .header__content {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header__logo {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .header__content .header__logo {
+    order: 0;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header__social {
+    display: none;
+  }
+
+  .header__towns-button {
+    display: none;
+  }
+
+  .header__title-mobile {
+    display: block;
+  }
+
+  .header__title {
+    order: 1;
+  }
+
+  .header__text {
+    order: 2;
+  }
+
+  .header__image {
+    position: static;
+    max-width: 100%;
+
+  }
+
+  .header__body {
+    padding: 0 38px;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  
+  100% {
+    transform: scale(1.03);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03);
+  }
+}
