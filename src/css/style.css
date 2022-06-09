@@ -690,7 +690,6 @@ h6 {
   }
 }
 
-
 @media (max-width: 450px) {
   .merch__item-image img {
     max-height: 150px;
@@ -724,5 +723,79 @@ h6 {
     font-size: 10px;
     line-height: 12px;
     padding: 7px 20px;
+  }
+}
+
+.footer {
+  padding-top: 82px;
+  padding-bottom: 85px;
+  background-color: #000000;
+}
+
+.footer__body {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer__top {
+  display: flex;
+}
+
+.footer__creators {
+  margin-left: 28px;
+  margin-bottom: -3px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  justify-content: end;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat';
+  color: #fff;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.footer__bottom {
+  display: flex;
+  margin-top: 51px;
+  justify-content: space-between;
+  column-gap: 10px;
+  row-gap: 13px;
+  flex-wrap: wrap;
+}
+
+.footer__social a {
+  margin-left: 6px;
+  text-decoration-line: underline;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer__social-vk {
+    order: 0;
+  }
+
+  .footer__social-tg {
+    order: 2;
+  }
+
+  .footer__social-mail {
+    order: 1;
+  }
+
+  .footer__social-phone {
+    order: 4;
   }
 }
