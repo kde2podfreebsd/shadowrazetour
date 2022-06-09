@@ -783,6 +783,11 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  .footer__creators {
+    font-size: 9px;
+    line-height: 10px;
+  }
+
   .footer__social {
     font-size: 15px;
     line-height: 18px;
@@ -805,10 +810,14 @@ h6 {
   }
 }
 
-
 @media (max-width: 450px) {
   .footer__social {
     font-size: 10px;
     line-height: 12px;
+  }
+
+  .footer__creators {
+    font-size: 6px;
+    line-height: 7px;
   }
 }
