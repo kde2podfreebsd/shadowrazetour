@@ -31,6 +31,8 @@ h6 {
   margin: 0;
 }
 
+/* HEADER */
+
 .header {
   padding-top: 230px;
   padding-bottom: 72px;
@@ -516,6 +518,7 @@ h6 {
   }
 
   .tour__column-item {
+    align-items: center;
     height: 24px;
   }
 
@@ -532,7 +535,8 @@ h6 {
   }
 
   .tour__item-vk-group {
-    width: 27px;
+    margin-top: 2px;
+    width: 24px;
   }
 
   .tour__item-tickets {
@@ -549,5 +553,176 @@ h6 {
     flex-direction: column;
     min-width: 0;
     row-gap: 15px;
+  }
+}
+
+/* MERCH */
+
+.merch {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.merch__body {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.merch__content {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.merch__item {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.march__title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 78px;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.merch__item-image img {
+  max-width: 100%;
+  display: flex;
+}
+
+.merch__item-description {
+  margin-top: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: end;
+}
+
+.merch__item-name {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.merch__item-price {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 44px;
+  margin: 12px 0 33px 0;
+
+  color: #000000;
+}
+
+.merch__item-button {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 16px 74px;
+  color: #ffffff;
+  background: #000000;
+  border-radius: 10px;
+}
+
+@media (max-width: 1300px) {
+  .merch__item {
+    width: calc(50% - 25px);
+  }
+
+  .merch__content {
+    justify-content: start;
+    row-gap: 50px;
+    column-gap: 50px;
+  }
+}
+
+.merch__item-image--tshirt {
+  margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+  .march__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .merch__item-name {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .merch__item-price {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  .merch__item-button {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 11px 30px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .merch__item-image img {
+    max-height: 150px;
+  }
+
+  .march__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .merch__item-name {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .merch__item-price {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .merch__item-button {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 7px 20px;
   }
 }
