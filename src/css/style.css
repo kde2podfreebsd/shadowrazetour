@@ -33,7 +33,7 @@ h6 {
 
 .header {
   padding-top: 230px;
-  padding-bottom: 43px;
+  padding-bottom: 72px;
   position: relative;
   overflow: hidden;
 }
@@ -55,7 +55,7 @@ h6 {
 }
 
 .header__column-left {
-  max-width: 50%;
+  max-width: 640px;
 }
 
 .header__column-right {
