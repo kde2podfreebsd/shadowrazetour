@@ -145,11 +145,74 @@ h6 {
   max-width: 100%;
   position: absolute;
   top: 104px;
-  left: 550px;
+  z-index: -1;
+  left: max(550px, 40%);
 }
 
 @media (max-width: 768px) {
-  
+  .header {
+    padding-top: 55px;
+    padding-bottom: 0;
+  }
+
+  .header__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__column-right {
+    display: none;
+  }
+
+  .header__column-left {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .header__title {
+    order: 1;
+    font-size: 48px;
+    line-height: 57px;
+    justify-content: center;
+  }
+
+  .header__content span {
+    display: block;
+    margin-left: 0.75rem;
+  }
+
+  .header__text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    max-width: 340px;
+    order: 2;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .go-to-towns-wrapper {
+    display: none;
+  }
+
+  .header__baza {
+    max-width: 38px;
+    margin-top: 0;
+    order: 0;
+    margin-bottom: 9px;
+  }
+
+  .header__image {
+    position: static;
+    margin-top: -25px;
+    max-width: 354px;
+  }
+}
+
+@media (max-width: 450px) {
   .header {
     padding-top: 55px;
     padding-bottom: 0;
@@ -209,7 +272,6 @@ h6 {
     position: static;
     margin-top: -25px;
     max-width: 236px;
-    
   }
 }
 
@@ -231,16 +293,261 @@ h6 {
   }
 }
 
-
 /* TOUR */
-
 
 .tour {
   background-color: #000000;
+  padding-top: 146px;
+  padding-bottom: 163px;
 }
 
 .tour__body {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 15px;
+}
+
+.tour__title {
+  font-family: 'Macondo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 76px;
+  color: #fff;
+  text-align: center;
+}
+
+.tour__info {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  padding: 0 100px;
+  margin-top: 43px;
+  margin-bottom: 58px;
+}
+
+.tour__content {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.tour__column {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  row-gap: 22px;
+}
+
+.tour__column-item {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  height: 56px;
+}
+
+.tour__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  -webkit-box-align: center;
+  justify-content: space-between;
+}
+
+.tour__item-date {
+  color: #fff;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.tour__item-city {
+  margin-left: 30px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tour__item-club {
+  margin-left: 15px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tour__item-vk-group {
+  color: #fff;
+  margin-right: 20px;
+}
+
+.tour__item-tickets {
+  background: #ffffff;
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 16px 74px;
+  color: #000000;
+  text-align: center;
+}
+
+.tour__item-tickets,
+.tour__item-vk-group {
+  transition: all 0.3s ease-in-out;
+}
+
+.tour__item-tickets:hover,
+.tour__item-vk-group:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1060px) {
+  .tour__item-club {
+    display: none;
+  }
+
+  .tour__item-tickets {
+    padding: 16px 50px;
+  }
+
+  .tour__item-city {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tour {
+    padding-top: 37px;
+    padding-bottom: 37px;
+  }
+
+  .tour__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tour__title {
+    display: none;
+  }
+
+  .tour__info {
+    order: 1;
+    margin: 0;
+    margin-top: 31px;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 0 35px;
+  }
+
+  .tour__column-item {
+    height: 40px;
+  }
+
+  .tour__item-date {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 0px;
+  }
+
+  .tour__item-city {
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .tour__item-vk-group {
+    width: 40px;
+  }
+
+  .tour__item-tickets {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 9px 22px;
+    background: #ffffff;
+    border-radius: 3px;
+  }
+
+  .tour__column {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    row-gap: 7px;
+  }
+}
+
+@media (max-width: 450px) {
+  .tour__title {
+    display: none;
+  }
+
+  .tour__info {
+    order: 1;
+    margin: 0;
+    margin-top: 31px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .tour__column-item {
+    height: 24px;
+  }
+
+  .tour__item-date {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 0px;
+  }
+
+  .tour__item-city {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .tour__item-vk-group {
+    width: 27px;
+  }
+
+  .tour__item-tickets {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 6px 15px;
+    background: #ffffff;
+    border-radius: 3px;
+  }
+
+  .tour__column {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    row-gap: 15px;
+  }
 }
