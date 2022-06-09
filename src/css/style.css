@@ -783,6 +783,11 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  .footer__social {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
   .footer__social-vk {
     order: 0;
   }
@@ -797,5 +802,13 @@ h6 {
 
   .footer__social-phone {
     order: 4;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .footer__social {
+    font-size: 10px;
+    line-height: 12px;
   }
 }
