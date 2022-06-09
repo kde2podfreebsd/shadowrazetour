@@ -32,24 +32,34 @@ h6 {
 }
 
 .header {
-  padding-top: 100px;
-  padding-bottom: 60px;
+  padding-top: 230px;
+  padding-bottom: 43px;
+  position: relative;
+  overflow: hidden;
 }
 
 .header__body {
-  max-width: 1200px;
+  max-width: 1160px;
   margin: 0 auto;
-  padding: 0 10px;
-}
-
-.header__top {
-  display: flex;
-  justify-content: space-between;
+  padding: 0 40px;
 }
 
 .header__content {
   display: flex;
+  justify-content: space-between;
+}
+
+.header__column {
+  display: flex;
   flex-direction: column;
+}
+
+.header__column-left {
+  max-width: 50%;
+}
+
+.header__column-right {
+  row-gap: 25px;
 }
 
 .header__title {
@@ -58,14 +68,14 @@ h6 {
   font-weight: 400;
   font-size: 96px;
   line-height: 113px;
+  display: flex;
 }
 
-.header__title-mobile {
+.header__title span {
   display: none;
 }
 
 .header__text {
-  max-width: 630px;
   font-family: 'Cormorant';
   font-style: normal;
   font-weight: 400;
@@ -74,18 +84,18 @@ h6 {
 }
 
 .header__button {
-  display: block;
-  margin-top: 35px;
-  padding: 9px 82px;
+  margin-top: 25px;
+  background: #000000;
+  border-radius: 30px;
   font-family: 'Cormorant';
   font-style: normal;
   font-weight: 700;
-  max-width: 373px;
   font-size: 24px;
   line-height: 29px;
-  background: #000000;
-  border-radius: 30px;
   color: #fff;
+  padding: 8px 0;
+  text-align: center;
+  max-width: 360px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -93,106 +103,113 @@ h6 {
   transform: scale(1.03);
 }
 
-.header__towns-button {
-  display: block;
-  padding: 8px 57px;
+.header__baza {
+  margin-top: 250px;
+  max-width: 89px;
+}
+
+.social-item {
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-item:hover {
+  opacity: 1;
+}
+
+.header__go-to-towns {
+  padding: 8px 58px;
   font-family: 'Cormorant';
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
-  max-width: 215px;
+  background: #fff;
   color: #000000;
-  background: #ffffff;
   box-shadow: 0px 15px 29px -6px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
-  margin: 0 auto;
-  margin-top: 2px;
-  text-align: center;
-  transition: all 0.3s ease;
-  animation: pulse 2s infinite;
+  animation: pulse 1.25s infinite;
 }
 
-.header__towns-button:hover {
-  transform: scale(1.03);
+.header__go-to-towns:hover {
   animation: none;
+  transform: scale(1.05);
 }
 
-.header__logo {
-  margin-top: 250px;
-  max-width: 100%;
-  width: 90px;
-}
-
-.header__social {
+.go-to-towns-wrapper {
   display: flex;
-  flex-direction: column;
-  row-gap: 26px;
-}
-
-.header__social-item {
-  opacity: 0.3;
-  transition: all 0.3s ease-in-out;
-}
-
-.header__social-item:hover {
-  opacity: 1;
+  justify-content: center;
 }
 
 .header__image {
+  max-width: 100%;
   position: absolute;
-  z-index: -1;
-  right: 0;
-  top: 175px;
+  top: 104px;
+  left: 550px;
 }
 
 @media (max-width: 768px) {
+  
+  .header {
+    padding-top: 55px;
+    padding-bottom: 0;
+  }
+
   .header__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__column-right {
+    display: none;
+  }
+
+  .header__column-left {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .header__title {
+    order: 1;
+    font-size: 32px;
+    line-height: 38px;
     justify-content: center;
+  }
+
+  .header__content span {
+    display: block;
+    margin-left: 0.75rem;
+  }
+
+  .header__text {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
     text-align: center;
-  }
-
-  .header__logo {
-    display: flex;
-    margin: 0 auto;
-  }
-
-  .header__content .header__logo {
-    order: 0;
+    max-width: 280px;
+    order: 2;
   }
 
   .header__button {
     display: none;
   }
 
-  .header__social {
+  .go-to-towns-wrapper {
     display: none;
   }
 
-  .header__towns-button {
-    display: none;
-  }
-
-  .header__title-mobile {
-    display: block;
-  }
-
-  .header__title {
-    order: 1;
-  }
-
-  .header__text {
-    order: 2;
+  .header__baza {
+    max-width: 38px;
+    margin-top: 0;
+    order: 0;
+    margin-bottom: 9px;
   }
 
   .header__image {
     position: static;
-    max-width: 100%;
-
-  }
-
-  .header__body {
-    padding: 0 38px;
+    margin-top: -25px;
+    max-width: 236px;
+    
   }
 }
 
@@ -200,9 +217,9 @@ h6 {
   0% {
     transform: scale(1);
   }
-  
+
   100% {
-    transform: scale(1.03);
+    transform: scale(1.05);
   }
 }
 @keyframes pulse {
@@ -210,6 +227,20 @@ h6 {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.03);
+    transform: scale(1.05);
   }
+}
+
+
+/* TOUR */
+
+
+.tour {
+  background-color: #000000;
+}
+
+.tour__body {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
