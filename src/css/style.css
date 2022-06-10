@@ -809,6 +809,9 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  .merch__item-image--tshirt {
+    margin-top: 15px;
+  }
   .footer__top img {
     max-width: 75px;
   }
