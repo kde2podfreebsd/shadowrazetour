@@ -73,7 +73,7 @@ const formHandler = (e) => {
   e.preventDefault();
 
   const data = {
-    amount: '3000.00',
+    amount: '3700.00',
     description: "ХУДИ 'X-SHADOW'",
     full_name: form.fullName.value,
     email: form.email.value,
