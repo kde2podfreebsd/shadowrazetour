@@ -559,9 +559,7 @@ h6 {
   }
 
   .tour__item-date {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 0px;
+
     width: 50px;
   }
 }
