@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../src/css/payment.css" />
+    <title>ОПЛАТА</title>
+  </head>
+  <body>
+    <div class="payment">
+      <div class="payment__body" id="container">
+        <div class="container" >
+          <h1 class="payment__title">Заполните форму</h1>
+          <form action="#" name="payment">
+            <div class="InputContainer">
+              <label for="fullName" class="InputLabel">ФИО:</label>
+              <input
+                tabindex="1"
+                class="Input"
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="ФИО:"
+                required
+              />
+            </div>
+            <div class="InputContainer">
+              <label for="tel" class="InputLabel">Номер телефона:</label>
+              <input
+                tabindex="2"
+                class="Input"
+                type="tel"
+                id="tel"
+                name="tel"
+                pattern="[+]{1}[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{4}"
+                placeholder="+7 123 456 78 90"
+                required
+                maxlength="12"
+              />
+            </div>
+            <div class="InputContainer">
+              <label for="email" class="InputLabel">Mail:</label>
+              <input
+                tabindex="2"
+                class="Input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="yourmail@mail.ru"
+                required
+              />
+            </div>
+            <div class="textareaContainer">
+              <label for="adress" class="InputLabel">Адрес:</label>
+              <textarea
+                name="adress"
+                id="adress"
+                class="Textarea"
+                placeholder="Город, улица, дом, почтовый индекс"
+                required
+              ></textarea>
+            </div>
+            <div class="selectContainer">
+              <label class="InputLabel">Ваш размер:</label>
+              <div class="selectWrapper">
+                <div class="select">
+                  <div class="selectBtn" data-type="firstOption" id="size">XS</div>
+                  <div class="selectDropdown">
+                    <div class="option option-first" data-type="firstOption">XS</div>
+                    <div class="option" data-type="secondOption">S</div>
+                    <div class="option" data-type="thirdOption">M</div>
+                    <div class="option" data-type="fourthOption">L</div>
+                    <div class="option option-last" data-type="fivethOption">
+                      XL
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input
+              tabindex="3"
+              type="submit"
+              value="ПЕРЕЙТИ К ОПЛАТЕ"
+              class="button__submit"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="../../src/js/select.js"></script>
+    <script src="./payment.js"></script>
+  </body>
+</html>

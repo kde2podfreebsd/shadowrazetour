@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Macondo&family=Montserrat:wght@300;400;500;700&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* SHOP */
+
+.shop {
+  padding: 80px 0;
+}
+
+.shop__body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shop__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 49%;
+}
+
+.shop__column--shoper {
+  width: 20%;
+  margin-left: 70px;
+}
+
+.shop__item-price {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.shop__item-name {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 16px;
+  margin-bottom: 37px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.shop__item-description {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.shop__item-description span {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.shop__item-size {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 49px;
+  margin-bottom: 29px;
+}
+
+.shop__item-button {
+  background: #000000;
+  border-radius: 10px;
+  padding: 16px 74px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+  max-width: 363px;
+  line-height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.shop__item-button:hover {
+  transform: scale(1.05);
+}
+
+.shop__item-button--shopper {
+  margin-top: 53px;
+}
+
+@media (max-width: 880px) {
+  .shop__body {
+    flex-direction: column;
+    row-gap: 100px;
+  }
+
+  .shop__column--shoper {
+    margin-left: 0;
+  }
+  .shop__column {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .shop__item-button {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .shop__body {
+    row-gap: 50px;
+  }
+
+  .shop__item-price {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .shop__item-name {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .shop__item-description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .shop__item-description span {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .shop__item-size {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .shop__item-button {
+    border-radius: 10px;
+    padding: 16px 25px;
+
+    font-weight: 400;
+    font-size: 16px;
+
+    line-height: 17px;
+  }
+}
+/*  */
