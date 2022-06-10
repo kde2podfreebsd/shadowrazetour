@@ -649,6 +649,7 @@ h6 {
   background: #000000;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
+  border-radius: 3px;
 }
 
 .merch__item-button:hover {
