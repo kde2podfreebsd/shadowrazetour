@@ -249,10 +249,11 @@ h6 {
 
   .header__text {
     font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
     text-align: center;
-    max-width: 280px;
+    max-width: 300px;
     order: 2;
   }
 
@@ -559,7 +560,6 @@ h6 {
   }
 
   .tour__item-date {
-
     width: 50px;
   }
 }
@@ -608,6 +608,10 @@ h6 {
   display: flex;
 }
 
+.merch__item-image-shopper img {
+  margin-top: -15px;
+}
+
 .merch__item-description {
   margin-top: 15px;
   height: 100%;
@@ -649,7 +653,6 @@ h6 {
   background: #000000;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
-  border-radius: 3px;
 }
 
 .merch__item-button:hover {
@@ -669,7 +672,7 @@ h6 {
 }
 
 .merch__item-image--tshirt {
-  margin-top: 25px;
+  margin-top: 35px;
 }
 
 @media (max-width: 768px) {
@@ -701,6 +704,7 @@ h6 {
     font-size: 15px;
     line-height: 18px;
     padding: 11px 30px;
+    border-radius: 3px;
   }
 }
 
@@ -826,6 +830,10 @@ h6 {
 
   .footer__social-tg {
     order: 2;
+  }
+
+  .footer__social-tg img {
+    width: 23px;
   }
 
   .footer__social-mail {
