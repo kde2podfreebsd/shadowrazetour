@@ -160,6 +160,7 @@ h6 {
 }
 
 .button__submit {
+  display: block;
   cursor: pointer;
   background: #000000;
   border-radius: 10px;
@@ -322,6 +323,12 @@ h6 {
   .button__submit {
     margin-top: 140px;
   }
+
+  .select {
+
+    margin-left: -3px;
+  }
+  
 }
 
 @media (max-width: 450px) {
