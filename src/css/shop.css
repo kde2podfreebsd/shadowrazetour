@@ -53,13 +53,11 @@ h6 {
   max-width: 49%;
 }
 
-.shop__column img {
-  max-width: 300px; 
-}
 
 
 .shop__column--shoper {
   width: 20%;
+  max-height: 300px;
   margin-left: 70px;
 }
 
