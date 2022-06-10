@@ -322,13 +322,12 @@ h6 {
 
   .button__submit {
     margin-top: 140px;
+    padding: 10px 25px;
   }
 
   .select {
-
     margin-left: -3px;
   }
-  
 }
 
 @media (max-width: 450px) {
@@ -484,14 +483,12 @@ h6 {
   color: rgba(0, 0, 0, 0.4);
 }
 
-
 @media (max-width: 650px) {
   .succes__title {
     font-size: 24px;
   }
-  
+
   .succes__text {
     font-size: 16px;
   }
-  
 }
