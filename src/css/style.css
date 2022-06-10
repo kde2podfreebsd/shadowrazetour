@@ -476,7 +476,7 @@ h6 {
     font-weight: 700;
     font-size: 22px;
     line-height: 0px;
-    width: 50px;
+    width: 75px;
   }
 
   .tour__item-city {
@@ -556,6 +556,13 @@ h6 {
     flex-direction: column;
     min-width: 0;
     row-gap: 15px;
+  }
+
+  .tour__item-date {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 0px;
+    width: 50px;
   }
 }
 
