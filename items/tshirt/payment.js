@@ -1,6 +1,6 @@
 const form = document.forms[0];
 const container = document.getElementById('container');
-const loading = `
+const loading =  `
 <div class="loading">
   <div class="lds-default">
     <div></div>
@@ -17,6 +17,7 @@ const loading = `
     <div></div>
   </div>
   <p class="loading__title">Ожидание оплаты</p>
+  <a class="loading__url" id="loadingURL" target="_blank">Ссылка на оплату</a>
 </div>
 `;
 
@@ -142,6 +143,7 @@ const sendOrder = async (transaction_id) => {
 const makePayment = async (data) => {
   const paymentData = await getPaymentData(data);
   const url = paymentData.payment_url;
+  document.getElementById('loadingURL').setAttribute('href', url);
   const transaction_id = paymentData.payment_id;
   console.log(paymentData, url, transaction_id);
   window.open(url);

@@ -492,3 +492,19 @@ h6 {
     font-size: 16px;
   }
 }
+
+.loading__url {
+  margin-top: 15px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  text-align: center;
+  color: blue;
+}
+
+
+.loading__url:hover {
+  color: rgb(28, 28, 142);
+}
