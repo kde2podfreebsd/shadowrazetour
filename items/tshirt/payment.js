@@ -30,7 +30,7 @@ const succes = `
 
 const getPaymentData = async (data) => {
   const response = await axios.post(
-    'https://31.31.203.202:5000create_payment',
+    'https://shadowrzetour-ru.vercel.app/create_payment',
     data,
     {
       headers: {
@@ -45,7 +45,7 @@ const getPaymentData = async (data) => {
 
 const getPaymentStatus = async (transaction_id) => {
   const response = await axios.post(
-    'https://31.31.203.202:5000transaction_status',
+    'https://shadowrzetour-ru.vercel.app/transaction_status',
     {
       transaction_id: transaction_id,
     },
@@ -90,7 +90,7 @@ form.addEventListener('submit', formHandler);
 
 const updatePaidStatus = async (transaction_id) => {
   const response = await axios.post(
-    'https://31.31.203.202:5000update_paid_status',
+    'https://shadowrzetour-ru.vercel.app/update_paid_status',
     {
       transaction_id: transaction_id,
     },
@@ -102,12 +102,11 @@ const updatePaidStatus = async (transaction_id) => {
       },
     }
   );
-  console.log(response);
 };
 
 const sendEmail = async (transaction_id) => {
   const response = await axios.post(
-    'https://31.31.203.202:5000send_mail',
+    'https://shadowrzetour-ru.vercel.app/send_mail',
     {
       transaction_id: transaction_id,
     },
@@ -119,12 +118,11 @@ const sendEmail = async (transaction_id) => {
       },
     }
   );
-  console.log(response);
 };
 
 const sendOrder = async (transaction_id) => {
   const response = await axios.post(
-    'https://31.31.203.202:5000send_order_tgbot',
+    'https://shadowrzetour-ru.vercel.app/send_order_tgbot',
     {
       transaction_id: transaction_id,
     },
@@ -136,7 +134,6 @@ const sendOrder = async (transaction_id) => {
       },
     }
   );
-  console.log(response);
 };
 
 const makePayment = async (data) => {
@@ -144,12 +141,10 @@ const makePayment = async (data) => {
   const url = paymentData.payment_url;
   document.getElementById('loadingURL').setAttribute('href', url);
   const transaction_id = paymentData.payment_id;
-  console.log(paymentData, url, transaction_id);
   window.open(url);
   const interval = setInterval(function () {
     getPaymentStatus(transaction_id).then((result) => {
       if (result === 'True') {
-        console.log('оплачено');
 
         updatePaidStatus(transaction_id);
         sendEmail(transaction_id);
@@ -159,7 +154,6 @@ const makePayment = async (data) => {
 
         clearInterval(interval);
       } else {
-        console.log('не оплачено');
       }
     });
   }, 4000);
