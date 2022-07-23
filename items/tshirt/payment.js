@@ -30,7 +30,7 @@ const succes = `
 
 const getPaymentData = async (data) => {
   const response = await axios.post(
-    'http://31.31.203.202:5000/create_payment',
+    'https://31.31.203.202:5000create_payment',
     data,
     {
       headers: {
@@ -45,7 +45,7 @@ const getPaymentData = async (data) => {
 
 const getPaymentStatus = async (transaction_id) => {
   const response = await axios.post(
-    'http://31.31.203.202:5000/transaction_status',
+    'https://31.31.203.202:5000transaction_status',
     {
       transaction_id: transaction_id,
     },
@@ -90,7 +90,7 @@ form.addEventListener('submit', formHandler);
 
 const updatePaidStatus = async (transaction_id) => {
   const response = await axios.post(
-    'http://31.31.203.202:5000/update_paid_status',
+    'https://31.31.203.202:5000update_paid_status',
     {
       transaction_id: transaction_id,
     },
@@ -107,7 +107,7 @@ const updatePaidStatus = async (transaction_id) => {
 
 const sendEmail = async (transaction_id) => {
   const response = await axios.post(
-    'http://31.31.203.202:5000/send_mail',
+    'https://31.31.203.202:5000send_mail',
     {
       transaction_id: transaction_id,
     },
@@ -124,7 +124,7 @@ const sendEmail = async (transaction_id) => {
 
 const sendOrder = async (transaction_id) => {
   const response = await axios.post(
-    'http://31.31.203.202:5000/send_order_tgbot',
+    'https://31.31.203.202:5000send_order_tgbot',
     {
       transaction_id: transaction_id,
     },
