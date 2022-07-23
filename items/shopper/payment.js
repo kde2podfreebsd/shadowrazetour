@@ -1,6 +1,6 @@
 const form = document.forms[0];
 const container = document.getElementById('container');
-const loading =  `
+const loading = `
 <div class="loading">
   <div class="lds-default">
     <div></div>
@@ -21,7 +21,6 @@ const loading =  `
 </div>
 `;
 
-
 const succes = `        
 <div class="succes">
   <img src="../../src/img/icons/Done.svg" alt="" />
@@ -31,7 +30,7 @@ const succes = `
 
 const getPaymentData = async (data) => {
   const response = await axios.post(
-    'https://ukassatest.herokuapp.com/create_payment',
+    'http://31.31.203.202:5000/create_payment',
     data,
     {
       headers: {
@@ -46,7 +45,7 @@ const getPaymentData = async (data) => {
 
 const getPaymentStatus = async (transaction_id) => {
   const response = await axios.post(
-    'https://ukassatest.herokuapp.com/transaction_status',
+    'http://31.31.203.202:5000/transaction_status',
     {
       transaction_id: transaction_id,
     },
@@ -92,7 +91,7 @@ form.addEventListener('submit', formHandler);
 
 const updatePaidStatus = async (transaction_id) => {
   const response = await axios.post(
-    'https://ukassatest.herokuapp.com/update_paid_status',
+    'http://31.31.203.202:5000/update_paid_status',
     {
       transaction_id: transaction_id,
     },
@@ -109,7 +108,7 @@ const updatePaidStatus = async (transaction_id) => {
 
 const sendEmail = async (transaction_id) => {
   const response = await axios.post(
-    'https://ukassatest.herokuapp.com/send_mail',
+    'http://31.31.203.202:5000/send_mail',
     {
       transaction_id: transaction_id,
     },
@@ -126,7 +125,7 @@ const sendEmail = async (transaction_id) => {
 
 const sendOrder = async (transaction_id) => {
   const response = await axios.post(
-    'https://ukassatest.herokuapp.com/send_order_tgbot',
+    'http://31.31.203.202:5000/send_order_tgbot',
     {
       transaction_id: transaction_id,
     },
